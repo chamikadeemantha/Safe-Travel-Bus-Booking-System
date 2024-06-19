@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	/*min-height : 100vh;
+	display : flex;
+	justify-content : center;
+	align-items : center;*/
+	
+
+}
+a{
+	color : #03f8fc;
+}
+
+.pfButton
+{
+	background : black;
+	color : #03f8fc;
+	width : 7%;
+	position: absolute;
+	border : 2px solid #03f8fc;
+	margin : 0.7em;
+	top: 2%;
+	left: 95%;
+	padding : 0.5em 1em;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border-radius : 30%;
+}
+.pfButton:hover {
+  background-color: #a88d60;
+}
+
+.container{
+	width : 100%;
+	padding : 20px;
+	background-image : url("image/4.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color : white;
+	
+}
+.container .title {
+	padding-bottom : 25px;
+	
+	padding-left : 25px;
+}
+.container h2{
+	font-size : 30px;
+		
+}
+.board_place {
+	width : 100%;
+	font-size : 18px;
+	background : transparent;
+	border : 2px solid black;
+	font-weight : bold;
+	color : white;
+	
+	
+}
+.destination {
+	width : 100%;
+	font-size : 18px;
+	background : transparent;
+	border : 2px solid black;
+	font-weight : bold;
+	color : white;
+	
+}
+
+
+.wrapper{
+	width : 50%;
+	display : grid;
+	grid-template-columns : repeat(auto-fit,minmax(250px,1fr));
+	grid-gap : 30px;
+	gap : 30px;
+	margin-bottom : 30px;
+}
+.wrapper .box{
+	width : 100%;
+	position : relative; 
+	padding : 10px;
+	
+	
+	
+}
+.wrapper .box input{
+	width : 100%;
+	font-size : 18px;
+	background : transparent;
+	border : 2px solid black;
+	font-weight : bold;
+	color : white;
+	
+	
+
+	
+	/*outline : none;
+	border-bottom : 1px solid red;*/
+}
+
+
+.wrapper .box label{
+	font-size : 20px;
+	font-weight : bold;
+}
+
+
+/*.wrapper .box input : focus,
+.wrapper .box input : focus{
+	padding : 20px 10px;
+	background : red;
+	margin-top : 10px;
+}
+.wrapper .box label {
+	 position : absolute;
+	 top : 0;
+	 left : 0;
+	 color : black;
+	 font-size : 18px;
+	 font-weight : bold;
+	 padding : 20px;
+	 transition : 0.5 linear;
+	 
+	 
+}*/
+
+.container form .submit-btn{
+  width: 50%;
+  padding:12px;
+  font-size: 17px;
+  background: black;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background: #f78d2a;
+}

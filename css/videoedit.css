@@ -1,0 +1,19 @@
+
+ .section
+      {
+
+       position:relative;
+       width:100%;
+       display:flex;
+      
+       align-items:center;
+       justify-content: center;
+       overflow: hidden;
+       border-style:solid;
+       border-color:white;
+
+
+
+      }
+
+     

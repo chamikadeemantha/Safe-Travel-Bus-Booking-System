@@ -1,0 +1,132 @@
+**Create a database called "safetravel"  in mysql server(phpmyadmin)
+**After that copy below code put sql window and compile it 
+
+-- Table structure for table `admin`
+
+CREATE TABLE `admin` (
+  `id` int(10) NOT NULL,
+  `Admin_username` varchar(25) NOT NULL,
+  `Admin_password` varchar(25) NOT NULL,
+  constraint pk_admin primary key(id) 
+);
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `Admin_username`, `Admin_password`) VALUES
+(1, 'systemadmin', 'sys123'),
+(2, 'owner', 'ow123'),
+(3, 'conductor', 'con456'),
+(4, 'Admin1', 'abd1678'),
+(5, 'Admin2', 'abd2678');
+
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+
+
+-- Table structure for table `registration`
+--
+
+CREATE TABLE `buses` (
+  `BusId` varchar NOT NULL,
+  `BusName` varchar(30) NOT NULL,
+  `Telephone` int(11) NOT NULL,
+   constraint pk_bus primary key(BusId)  
+);
+
+
+
+INSERT INTO `buses` (`BusId`, `BusName`, `Telephone`) VALUES
+('1', 'JAFFNA EXPRESS', 7710010),
+('2', 'NEGAMBO EXPRESS', 7710011),
+('3', 'AMPARA EXPRESS', 7710012),
+('4', 'MULLATIVU EXPRESS', 7710013),
+('5', 'BATTICALOA EXPRESS', 7710014),
+('6', 'KANDY EXPRESS', 7710015),
+('7', 'TRICOMALEE EXPRESS', 7710016),
+('8', 'POLONNARUWA EXPRESS', 7710017),
+('9', 'ADDITION 1 ', 7710018),
+('10', 'ADDITION 2', 7710019);
+
+ 
+-- Table structure for table Schedule
+CREATE TABLE Schedule (
+	
+	SID int NOT NULL,
+	Boarding_place  varchar(50) NOT NULL,
+	Destination varchar(50) NOT NULL,
+	Bus_Name varchar(50) NOT NULL,
+      Departure_date date NOT NULL,
+      Departure_time time(6) NOT NULL,
+      Cost int NOT NULL,
+	constraint pk_route primary key(SID)
+);
+
+-- AUTO_INCREMENT for table Schedule
+ALTER TABLE `schedule`
+MODIFY `SID` INT AUTO_INCREMENT;
+
+-- Dumping data for table Schedule
+INSERT INTO Schedule  VALUES(1,'Galle','Jaffna','Jaffna Express','2023/05/28','6:00Am','5200');
+INSERT INTO Schedule  VALUES(2,'Galle','Negambo','Negambo Express','2023/05/28','6:00Am','2800');
+INSERT INTO Schedule  VALUES(3,'Galle','Ampara','Ampara Express','2023/05/28','6:00Am','3900');
+INSERT INTO Schedule  VALUES(4,'Galle','Mullaitive','Mullaitive Express','2023/05/28','6:00Am','4800');
+INSERT INTO Schedule  VALUES(5,'Mathara','Batticaloa','Batticaloa Express','2023/05/28','5:30Am','3900');
+INSERT INTO Schedule  VALUES(6,'Mathara','Kandy','Kandy Express','2023/05/28','5:30Am','3200');
+INSERT INTO Schedule  VALUES(7,'Mathara','Trincomalee','Trincomalee Express','2023/05/28','5:30Am','4800');
+INSERT INTO Schedule  VALUES(8,'Mathara','Polonnaruwa','Polonnaruwa Express','2023/05/28','5:30Am','4000');
+
+
+  
+CREATE TABLE `registration` (
+  `id` int(20) NOT NULL,
+  `fname` varchar(15) NOT NULL,
+  `lname` varchar(15) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `num` varchar(10) NOT NULL,
+  `birth` date NOT NULL,
+  `male` varchar(10) NOT NULL,
+  `nic` varchar(12) NOT NULL,
+  `user_name` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+   constraint pk_regist primary key(id) 
+);
+
+
+-- AUTO_INCREMENT for table `registration`
+--
+ALTER TABLE `registration`
+MODIFY `id` int(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12547;
+
+
+CREATE TABLE payment (
+  Ef_id int(11) NOT NULL AUTO_INCREMENT,
+  Amount varchar(100) NOT NULL,
+  Date_created timestamp NOT NULL,
+  constraint pk_payment primary key(Ef_id)
+);
+ALTER TABLE `payment`
+MODIFY `Ef_id` int NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10175;
+
+CREATE TABLE ticket (
+  T_ID int(11) NOT NULL AUTO_INCREMENT,
+  First_name varchar(55) NOT NULL,
+  Last_name varchar(55) NOT NULL,
+  Telephone varchar(15) NOT NULL,
+  Email varchar(55) NOT NULL,
+  Boarding_place varchar(50) NOT NULL,
+  Destination varchar(55) NOT NULL,
+  Depature_Date date NOT NULL,
+  Depature_Time varchar(100) NOT NULL,
+  Return_Date date NOT NULL,
+  Return_Time varchar(100) NOT NULL,
+  Amount varchar(20) DEFAULT NULL,
+  constraint pk_ticket primary key(T_ID)
+)
+
+
+
+
